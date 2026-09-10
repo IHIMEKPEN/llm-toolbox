@@ -1,0 +1,33 @@
+{
+  "name": "lms-plugin-llm-toolbox",
+  "version": "1.0.0",
+  "description": "Security-first LM Studio toolbox: sandboxed files, live web, research, screenshots, audio/video, memory, and prompt prep.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node api.js && lms dev",
+    "push": "lms push",
+    "test": "node --import tsx --test src/security/paths.test.ts src/security/urls.test.ts src/security/mediaPaths.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "author": "Andrew Ihimekpen",
+  "license": "MIT",
+  "keywords": [
+    "lm-studio",
+    "plugin",
+    "mcp",
+    "local-llm",
+    "research",
+    "security"
+  ],
+  "dependencies": {
+    "@lmstudio/sdk": "1.4.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
+    "zod": "3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.3"
+  }
+}
